@@ -16,8 +16,8 @@
       this.minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
       this.second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
       var t = this.year + "-" + this.month + "-"
-        + time.date + " " + time.hour + ":"
-        + time.minute + ":" + time.second;
+        + this.date + " " + this.hour + ":"
+        + this.minute + ":" + this.second;
       show.innerHTML = t;
     };
   </script>
