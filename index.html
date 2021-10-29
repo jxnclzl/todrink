@@ -159,6 +159,45 @@
   <title>index</title>
 
   <style>
+    .dAvatar_m_showImg .img {
+    display: inline-block;
+    max-width: 95%;
+    text-align: left;
+    font-size: 14px;
+    white-space: normal;
+    vertical-align: middle;
+    }
+
+    .dAvatar_m_showImg div {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 0;
+    white-space: nowrap;
+    overflow: auto;
+    }
+
+    .dAvatar_m_showImg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 121;
+    background-color: rgba(0,0,0,.7);
+    }
+    .dAvatar_m_showImg .dAvatar_m_showImg_close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAABGdBTUEAALGPC/xhBQAABRJJREFUWAnVmU2IHEUUx1/1hJmdZDGH7G60HXIxqBCIYrK6hxyMeolgojdzEkFQWFECCgY9GhQUguCiJ6/eNEvAXFQ85LAxrmgg4EWQZXZMsht1cdbZmcxM+f7VXU13TVd/TM/Oknfp6qp67/2m5vWr6teCCsqtZ2fvbW/Rc1LKIySES5JcIumSoH3cvk0kGtxukJQNIcRyZYIuznxz9UYRt2IY5cYzxw70+p3TDHeKYeYkk2W1wxMl/7glVlksOeUv3W8vr2TV1fMyO4NC/enH9/Vl/11uzrPrsjYy9FVQh3UXHOGcq333I/8r2SQTtDxxolJvr5+RJN9h2L3ZTOeYJWhDkPiwVpk6Ly5daqdppkKrmG3R1ww8l2as6DiDL1Wq9EJazCdCN56ae6wne4sMXCsKlFWfweslUTrlfr/0s03HsQ2sHj96koEvjxMYLPAHv/BvY4tdaX+FAVy1KW53P694i1f8WNyKD6w0YtgPiR0DxoJgwcABHnOBItDIEm3voRtbDJtA4XuEiuJhrnB/BNpPa9YsIaq7aVftQFi/cBv2YNcmDD4HrvB4ENP+xvG7LQ+XDx2m6Q8+IWdykrZ+Xab1994iudkM28rVFnsmaer9j2nikSPUbzZp7eyb1Ll+Ld4G53HegB7QG1Cw0mqnS9g47jn9kgKGVTia/uhTguNhBHrQhx0IFgL2rcJc/k6spihonCX4bt6qxAO9f/6ODFcePjQUuAaGflhM++Exvz3vc5KCVoeflLPExhefUbdRj9jKC24Dhl3YTxTm8w5p/M+oiVI+n6jAg/2/btOtM68NDZ4EDLuwnyo+p/DOFrKR9XhZmt5PM+c/p11uNCu2f7tOa2+/HvtwpgH31m6m8mICZw1ZqQrX6bToZFZgKMJBnhUfFTB8gxMvHA43vEcYvRklK/gogQM0SUcdKei+oCNHIw3cmdmvsouZJfDQ4Z/KGhImEnjFyvHZn3jhc6+2NmaL8X6rRU41enwpCuz5FMucPfgltIDYVnx7gAEqXUe9NReAhmoA/udqrKXujUahkIgY5bd8hx/JDAkyohZ70/9vk/qbm7Fjvea/hPGRCPNyeHBdoqDoLFE++GCspcrBh4ba8mONMS/CoxC0BjazhOx2Iz7zbvkR5fAN83J4yKGhbcDIEjffeGXoLT/MONBmXgelqoGBDB1JwMjDd3hbz7NzZnCppoDXQW0Ne3pWJcxLA9YbR5BVCp4ONZs6ezCv4xVGxBU9kHbNCqztjBSca4Dg9Y6mQlzQTpKueYG1rdGBi0XYVNCoXnIWQTHQKmL3nkJniVRwtp8ozKc4eZKC9sutC0lKe19+lcy0lvcskQQO+ymyoMvCXniAnsutvNobNkWzdJAXWNu1gZv29Xx19d7Gz+m+ABqv5yi36gHz2rz4Fcmet2HcWfmj0FlCg8MOBHZh3ybg0uUDzAnqHrhRdeit9R9QIMG9KSX3fvWa1bn2C8lOahnZVB+4F+UKlQ8/St3VOvUshy0GXqpNTD0ZrltHoGHVr0dfRUlqwMuYOxi4zvXqWbNeHYSH5sEE1IdZoaX7duIK/+AwgcEyAI1OlFf5UPLiToHDL/zHlXnBNxAe6NRy130JADh+KWKKfzl/Qtt+gR/4s62wJogNDz2IK2JKPb1CnE3K42Gd3G183WL78BMXw6a9xPAwJ99V3xFN+OCLraqtySfyVKh4lTD9Cn+1vTCWL7YmPO5VXh/zt/H/AZG91yEKKC++AAAAAElFTkSuQmCC);
+    background-size: 20px 20px;
+    z-index: 10;
+    }
+
     .frame_load_img {
       display: inline-block;
       width: 50px;
@@ -358,7 +397,7 @@
             </div>
           </div>
           <!---->
-
+          
           <div class="">
             <div class="pluginnames"><span
                 style="color: rgb(135, 135, 135); font-size: 14px; font-family: 微软雅黑; line-height: 22px; --darkreader-inline-color:#aa9f8d;"
@@ -367,8 +406,12 @@
             <div class="plugin-allbox" plugin="[object Object]">
               <div data-key="Qrcode_11" class="dplugin-box"
                 style="margin-top: 0px; margin-bottom: 0px; width: 100%; text-align: center; height: 100%; overflow-x: auto;">
-                <div class="dplugin-mobile"><img src="https://imgservice.bupt.edu.cn/image/1891/3782919.jpg"
+                <div class="dplugin-mobile"><img src="https://imgservice.bupt.edu.cn/image/1891/3782919.jpg" onclick="showImg(this.src)"
                     style="height: 100px; width: 100px;" ></img></div>
+              </div>
+              <div class="dAvatar_m_showImg" id="imgContent">
+                <i class="dAvatar_m_showImg_close" onclick="col()"></i>
+                <div><img src="" alt="" class="img" id="imgCon"></div>
               </div>
             </div>
           </div>
@@ -414,7 +457,7 @@
                   style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: #008000; text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px; --darkreader-inline-color:#008000;"
                   data-darkreader-inline-color=""><span
                     style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: #008000; text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px; --darkreader-inline-color:#008000;"
-                    data-darkreader-inline-color="">允许出校</span></div>
+                    data-darkreader-inline-color="">允许入校</span></div>
               </div>
             </div>
           </div>
@@ -646,11 +689,24 @@
     <div style="width: 0%;"></div>
   </div>
   <img id="visits_collect" src="./index_files/collect" style="display: none;">
-
+  
   <script>
     function showLegalNotices() {
       window.location.href = "https://app.bupt.edu.cn/site/applicationSquare/index?sid=2"
     }
+  </script>
+
+  <script>
+
+    function showImg(url) {
+       document.getElementById('imgCon').src = url;
+       document.getElementById('imgContent').style.display='block';
+   }
+  
+    function col() {
+       document.getElementById('imgContent').style.display='none';
+   }
+  
   </script>
 </body>
 
