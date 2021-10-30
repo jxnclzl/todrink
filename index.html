@@ -187,6 +187,7 @@
     z-index: 121;
     background-color: rgba(0,0,0,.7);
     }
+
     .dAvatar_m_showImg .dAvatar_m_showImg_close {
     position: absolute;
     top: 5px;
@@ -197,6 +198,79 @@
     background-size: 20px 20px;
     z-index: 10;
     }
+    #wxform .forms_dialog {
+    display:none;
+    }
+
+    #wxform .forms_dialog .forms_dialog_bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 111;
+    background-color: rgba(0,0,0,.3);
+    }
+
+    #wxform .forms_dialog .forms_dialog_con {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1111;
+    width: 100%;
+    }
+
+    #wxform .forms_dialog .forms_dialog_con>li {
+    max-width: 100%;
+    height: 38px;
+    background-color: #fff;
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+    line-height: 38px;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style: none;
+    display: list-item;
+    }
+
+    #wxform .draftbox {
+    display: none;
+    }
+
+    #wxform .draftbox .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(121,121,121,.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 111;
+    }
+
+    #wxform .draftbox>ul {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1111;
+    }
+
+    #wxform .draftbox>ul li {
+    width: 100%;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    margin-bottom: 3px;
+    color: #4285f4;
+    background-color: #fff;
+    }
+
 
     .frame_load_img {
       display: inline-block;
@@ -354,7 +428,7 @@
 
     <div class="forms">
       <div style="padding-left: 0; padding-right: 0;" class="toptabla">
-        <div class="toptabla_con">
+        <div class="toptabla_con" onclick="showForm()">
           <div class="formsTop_left">
             <img src="index_files/top-icon2.png"></img>
             <p>当前部门：信息与通信工程学院</p>
@@ -600,7 +674,7 @@
         <!---->
       </div>
       <div class="wxformbtn m_start_btn">
-        <button class="draftdiv active" onclick="showLegalNotices()">
+        <button class="draftdiv active" onclick="showForm2()">
           更多
         </button>
         <div class="wxformbtn_center">
@@ -609,6 +683,24 @@
         <!---->
       </div>
     </div>
+
+    <div class="forms_dialog" id="forms_dialog">
+      <div class="forms_dialog_bg"></div> 
+      <ul class="forms_dialog_con">
+        <li onclick="refresh()">信息与通信工程学院</li> 
+        <li onclick="col2()">取消 </li>
+      </ul>
+    </div>
+
+    <div class="draftbox" id="draftbox">
+      <div class="bg"></div> 
+      <ul><!----> 
+        <li class="draftdiv active" onclick="showLegalNotices()">预览表单</li> <!----> 
+        <li onclick="col3()">取消</li>
+      </ul>
+    </div>
+
+    
     <div class="processimg">
       <div class="svg"><img src="./index_files/svg.png" alt=""></div>
     </div>
@@ -691,9 +783,15 @@
   <img id="visits_collect" src="./index_files/collect" style="display: none;">
   
   <script>
+
     function showLegalNotices() {
-      window.location.href = "https://cssnow98.github.io/drinkback/"
+      window.location.href = "https://cssnow98.github.io/drinkback/";
     }
+
+    function refresh() {
+      window.location.href = "https://cssnow98.github.io/todrink/";
+    }
+
   </script>
 
   <script>
@@ -702,9 +800,25 @@
        document.getElementById('imgCon').src = url;
        document.getElementById('imgContent').style.display='block';
    }
-  
+
+   function showForm() {
+       document.getElementById('forms_dialog').style.display='block';
+   }
+
+   function showForm2() {
+       document.getElementById('draftbox').style.display='block';
+   }
+
     function col() {
        document.getElementById('imgContent').style.display='none';
+   }
+
+   function col2() {
+       document.getElementById('forms_dialog').style.display='none';
+   }
+
+   function col3() {
+       document.getElementById('draftbox').style.display='none';
    }
   
   </script>
