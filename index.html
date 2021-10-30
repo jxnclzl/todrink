@@ -26,6 +26,7 @@
     const alertMessage = "__alert__"
     alertMessage && alertMessage !== "__alert__" && alert(alertMessage)
   </script>
+
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <style class="darkreader darkreader--fallback" media="screen"></style>
   <style class="darkreader darkreader--text" media="screen"></style>
@@ -459,11 +460,11 @@
             <div class="plugin-allbox">
               <div data-key="User_3" class="dplugin-box"
                 style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
-                <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span
-                    class="doneplugin-value doneplugin-value-userview"
+                <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput">
+                  <span id = "name" class="doneplugin-value doneplugin-value-userview"
                     style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px; --darkreader-inline-color:rgb(96, 98, 102);"
-                    data-darkreader-inline-color="">
-                    崔凇
+                    data-darkreader-inline-color="" onclick="replace()">
+                    点这里
                   </span></div>
               </div>
               <!---->
@@ -479,7 +480,7 @@
             <div class="plugin-allbox" plugin="[object Object]">
               <div data-key="Qrcode_11" class="dplugin-box"
                 style="margin-top: 0px; margin-bottom: 0px; width: 100%; text-align: center; height: 100%; overflow-x: auto;">
-                <div class="dplugin-mobile"><img src="https://imgservice.bupt.edu.cn/image/1891/3782919.jpg" onclick="showImg(this.src)"
+                <div class="dplugin-mobile"><img id = "picture" src="" onclick="showImg(this.src)"
                     style="height: 100px; width: 100px;" ></img></div>
               </div>
               <div class="dAvatar_m_showImg" id="imgContent" onclick="col()">
@@ -514,7 +515,7 @@
               <div data-key="Qrcode_11" class="dplugin-box"
                 style="margin-top: 0px; margin-bottom: 0px; width: 100%; text-align: center; height: 100%; overflow-x: auto;">
                 <div class="dplugin-mobile"><img id="Qrcode_11_qrcodecanvas"
-                    style="height: 150px; width: 150px;" src="index_files/1598430470533.JPEG" onclick="display('outtext')"></img></div>
+                    style="height: 150px; width: 150px;" src="index_files/1598430470533.JPEG" ></img></div>
               </div>
             </div>
           </div>
@@ -546,11 +547,11 @@
             <div class="plugin-allbox">
               <div data-key="User_5" class="dplugin-box"
                 style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
-                <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span
+                <div class="dplugin-mobile dplugin-doneplugin dplugin-mobile-dinput"><span id = "idcard"
                     class="doneplugin-value doneplugin-value-userview"
                     style="font-size: 14px; font-family: 微软雅黑; font-weight: normal; font-style: normal; color: rgb(96, 98, 102); text-decoration: none; text-align: center; line-height: 15px; letter-spacing: 0px; --darkreader-inline-color:rgb(96, 98, 102);"
                     data-darkreader-inline-color="">
-                    2020140089
+                    1234567890
                   </span></div>
               </div>
             </div>
@@ -716,11 +717,53 @@
   </script>
 
   <script>
+    
+    var i = 0;
 
     function showImg(url) {
        document.getElementById('imgCon').src = url;
        document.getElementById('imgContent').style.display='block';
    }
+
+    function replace() {
+      i++; 
+      switch(i)
+      {
+        case 1:
+            document.getElementById('name').innerHTML = "崔凇";
+            document.getElementById('picture').src = "https://imgservice.bupt.edu.cn/image/1891/3782919.jpg";
+            document.getElementById('idcard').innerHTML = "2020140089";
+            break;
+        case 2:
+            document.getElementById('name').innerHTML = "林上豪";
+            document.getElementById('picture').src = "https://imgservice.bupt.edu.cn/image/1891/3782885.jpg";
+            document.getElementById('idcard').innerHTML = "2020140106";
+            break;
+        case 3:
+            document.getElementById('name').innerHTML = "陈柯安";
+            document.getElementById('picture').src = "https://imgservice.bupt.edu.cn/image/1891/3782891.jpg";
+            document.getElementById('idcard').innerHTML = "2020140103";
+            break;
+        case 4:
+            document.getElementById('name').innerHTML = "刘慧焘";
+            document.getElementById('picture').src = "https://imgservice.bupt.edu.cn/image/1891/3782893.jpg";
+            document.getElementById('idcard').innerHTML = "2020140102";
+            break;
+        case 5:
+            document.getElementById('name').innerHTML = "卢大阳";
+            document.getElementById('picture').src = "https://imgservice.bupt.edu.cn/image/1891/3782901.jpg";
+            document.getElementById('idcard').innerHTML = "2020140098";
+            break;
+        case 6:
+            document.getElementById('name').innerHTML = "吕俊璋";
+            document.getElementById('picture').src = "https://imgservice.bupt.edu.cn/image/1891/3782911.jpg";
+            document.getElementById('idcard').innerHTML = "2020140093";
+            i = i % 6;
+            break;
+        default:
+          break;
+      }         
+    }
 
    function display(id1,id2){  
         var traget1 = document.getElementById(id1);  
