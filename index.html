@@ -271,7 +271,6 @@
     background-color: #fff;
     }
 
-
     .frame_load_img {
       display: inline-block;
       width: 50px;
@@ -483,8 +482,8 @@
                 <div class="dplugin-mobile"><img src="https://imgservice.bupt.edu.cn/image/1891/3782919.jpg" onclick="showImg(this.src)"
                     style="height: 100px; width: 100px;" ></img></div>
               </div>
-              <div class="dAvatar_m_showImg" id="imgContent">
-                <i class="dAvatar_m_showImg_close" onclick="col()"></i>
+              <div class="dAvatar_m_showImg" id="imgContent" onclick="col()">
+                <i class="dAvatar_m_showImg_close"></i>
                 <div><img src="" alt="" class="img" id="imgCon"></div>
               </div>
             </div>
@@ -515,7 +514,7 @@
               <div data-key="Qrcode_11" class="dplugin-box"
                 style="margin-top: 0px; margin-bottom: 0px; width: 100%; text-align: center; height: 100%; overflow-x: auto;">
                 <div class="dplugin-mobile"><img id="Qrcode_11_qrcodecanvas"
-                    style="height: 150px; width: 150px;" src="index_files/1598430470533.JPEG"></img></div>
+                    style="height: 150px; width: 150px;" src="index_files/1598430470533.JPEG" onclick="display('outtext')"></img></div>
               </div>
             </div>
           </div>
@@ -529,9 +528,12 @@
                 style="margin-top: 0px; margin-bottom: 0px; text-align: center;">
                 <div class="dplugin-mobile dplugin-mobile-dinput dinput-vie dplugin-mobile-dinput-focusalert"
                   style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: #008000; text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px; --darkreader-inline-color:#008000;"
-                  data-darkreader-inline-color=""><span
-                    style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: #008000; text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px; --darkreader-inline-color:#008000;"
-                    data-darkreader-inline-color="">允许出校</span></div>
+                  data-darkreader-inline-color="">
+                  <span id = "intext" style="font-size: 18px; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: #008000; text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px; --darkreader-inline-color:#008000;"
+                    data-darkreader-inline-color="" onclick= "display('outtext','intext')">允许出校</span>
+                  <span id = "outtext" style="font-size: 18px;  display: none ; font-family: 微软雅黑; font-weight: bold; font-style: normal; color: #008000; text-decoration: none; text-align: center; line-height: 20px; letter-spacing: 0px; --darkreader-inline-color:#008000;"
+                    data-darkreader-inline-color="" onclick= "display('outtext','intext')">允许入校</span>
+                </div>
               </div>
             </div>
           </div>
@@ -700,87 +702,6 @@
       </ul>
     </div>
 
-    
-    <div class="processimg">
-      <div class="svg"><img src="./index_files/svg.png" alt=""></div>
-    </div>
-    <div class="showBpmn_class" style="display: none;"></div>
-    <!---->
-    <!---->
-    <!---->
-    <!---->
-    <!---->
-    <!---->
-    <!---->
-    <!---->
-    <div class="el-dialog__wrapper" style="display: none;">
-      <div role="dialog" aria-modal="true" aria-label="添加人员" class="el-dialog el-dialog--center dialog_search_user"
-        style="margin-top: 15vh; width: 300px;">
-        <div class="el-dialog__header"><span class="el-dialog__title">添加人员</span><button type="button"
-            aria-label="Close" class="el-dialog__headerbtn"><i
-              class="el-dialog__close el-icon el-icon-close"></i></button></div>
-        <!---->
-        <div class="el-dialog__footer"><span class="dialog-footer"><button type="button"
-              class="el-button el-button--default">
-              <!---->
-              <!----><span>取 消</span>
-            </button> <button type="button" class="el-button el-button--primary">
-              <!---->
-              <!----><span>确 定</span>
-            </button></span></div>
-      </div>
-    </div>
-    <div class="el-dialog__wrapper" style="display: none;">
-      <div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog el-dialog--center dialog_agent_depart"
-        style="margin-top: 15vh; width: 300px;">
-        <div class="el-dialog__header"><span class="el-dialog__title"></span><button type="button" aria-label="Close"
-            class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div>
-        <!---->
-        <div class="el-dialog__footer"><span class="dialog-footer"><button type="button"
-              class="el-button el-button--default">
-              <!---->
-              <!----><span>取 消</span>
-            </button> <button type="button" class="el-button el-button--primary">
-              <!---->
-              <!----><span>确 定</span>
-            </button></span></div>
-      </div>
-    </div>
-    <!---->
-    <div class="el-dialog__wrapper" style="display: none;">
-      <div role="dialog" aria-modal="true" aria-label="dialog" class="el-dialog" style="margin-top: 15vh; width: 80%;">
-        <div class="el-dialog__header"><span class="el-dialog__title"></span>
-          <!---->
-        </div>
-        <!---->
-        <!---->
-      </div>
-    </div>
-    <div>
-      <div class="el-dialog__wrapper" style="display: none;">
-        <div role="dialog" aria-modal="true" aria-label="提示"
-          class="el-dialog el-dialog--center common_tip_dialog submit_layer" style="margin-top: 15vh;">
-          <div class="el-dialog__header"><span class="el-dialog__title">提示</span>
-            <!---->
-          </div>
-          <!---->
-          <div class="el-dialog__footer"><span class="dialog-footer"><button
-                class="zl-button zl-button-line zl-button-auto zl-button-mini">返回修改 <i
-                  class="iconfont iconarrowdown"></i></button>
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <button class="zl-button zl-button-primary zl-button-fixed zl-button-mini">确定 <i
-                  class="iconfont iconarrowdown"></i></button></span></div>
-        </div>
-      </div>
-    </div>
-    <!---->
-    <!---->
-  </div><iframe id="printCasLogout" style="display: none;" src="./index_files/saved_resource.html"></iframe>
-
-  <div id="progress_loading" style="display: none;">
-    <div style="width: 0%;"></div>
-  </div>
-  <img id="visits_collect" src="./index_files/collect" style="display: none;">
   
   <script>
 
@@ -801,6 +722,21 @@
        document.getElementById('imgContent').style.display='block';
    }
 
+   function display(id1,id2){  
+        var traget1 = document.getElementById(id1);  
+        var traget2 = document.getElementById(id2);  
+        if(traget1.style.display=="none")
+        {  
+            traget1.style.display="";  
+            traget2.style.display="none";
+        }
+        else
+        {  
+            traget1.style.display="none";  
+            traget2.style.display="";  
+        }  
+   }
+
    function showForm() {
        document.getElementById('forms_dialog').style.display='block';
    }
@@ -817,10 +753,11 @@
        document.getElementById('forms_dialog').style.display='none';
    }
 
+
    function col3() {
        document.getElementById('draftbox').style.display='none';
    }
-  
+
   </script>
 </body>
 
